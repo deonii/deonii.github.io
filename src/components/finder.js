@@ -5,6 +5,13 @@ import pages from '../pages/pages.json'
 import { useNavigate } from "react-router-dom"
 
 function Finder({element}) {
+    const [fileList, setFileList] = useState([])
+
+    useEffect(()=>{
+        let fileList1 = pages[element].map(()=>false)
+        setFileList(fileList1)
+    }, [element])
+
     return (
         <>
         <Draggable handle=".for-drag" >
@@ -15,7 +22,8 @@ function Finder({element}) {
                     {
                         pages[element].map((page,i)=>{
                             return (
-                                <File name={page.name} index={i} element={element} date={page.date}/>
+                                <File key={i} name={page.name} index={i} element={element} date={page.date} 
+                                fileList={fileList} setFileList={setFileList}/>
                             )
                         })
                     }
@@ -28,16 +36,14 @@ function Finder({element}) {
     )
 }
 
-function File({name, index, element, date}) {
-    let [select, setSelect] = useState(false)
+function File({name, index, element, date, fileList, setFileList}) {
     const select_img = (e) => {
-        if(!select) {
-            let selected_list = Array.from(document.getElementsByClassName('selected'))
-            for(let i = 0; i< selected_list.length; i++){
-                selected_list[i].className = selected_list[i].className.split(' ')[0]
-            }
+        let fileList1 = [...fileList]
+        fileList1 = fileList1.map(()=>false)
+        if(!fileList[index]){
+            fileList1[index] = true
         }
-        select ? setSelect(false) : setSelect(true)
+        setFileList(fileList1)
     }
     let navigate = useNavigate(); 
     const go_to_page = () =>{ 
@@ -48,9 +54,9 @@ function File({name, index, element, date}) {
     return (
         <Draggable handle={[".file-img", ".file-name"]}>
         <div className="file">
-            <div className={select ? "file-img selected" : "file-img"} onDoubleClick={()=>{go_to_page()}} onClick={()=>{select_img()}} style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/img/file.png'})`}}>
+            <div className={fileList[index] ? "file-img selected" : "file-img"} onDoubleClick={()=>{go_to_page()}} onClick={()=>{select_img()}} style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/img/file.png'})`}}>
             </div>
-            <p className={select ? "file-name selected" : "file-name"}>
+            <p className={fileList[index] ? "file-name selected" : "file-name"}>
                 {name}
             </p>
         </div>

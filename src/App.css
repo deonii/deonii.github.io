@@ -192,8 +192,10 @@ body {
     overflow: auto;
     color: #ccd2dd;
     font-weight: 600;
-    padding: 10px;
+    padding: 0px 10px;
     box-sizing: border-box;
+    display:grid;
+    line-height: 150%;
 }
 
 .for-drag-page {
@@ -207,8 +209,10 @@ body {
 }
 
 .numbers {
-    /* height: 25px; */
+    box-sizing: border-box;
+    border-bottom: #838d98 1px solid;
     text-align: center;
     color:#838d98;
     font-weight: 600;
+    padding-top: 5px;
 }

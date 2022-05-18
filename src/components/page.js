@@ -1,58 +1,78 @@
-import pages from '../pages/pages.json'
+import pages from "../pages/pages.json";
 import Draggable from "react-draggable";
-import { useParams } from 'react-router';
-import { useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import { useParams } from "react-router";
+import { useEffect, useState, useRef } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-function Page({element}) {
-    let {id} = useParams();
-    let [t1, setT1] = useState('')
 
-    let numbers = []
+function Page({ element }) {
+  const { id } = useParams();
+  const [t1, setT1] = useState("");
+  const [heightList, setHeightList] = useState([]);
+  const cRef = useRef(null);
+  const ref = useRef({});
+  const index = id.slice(8);
+  const page = pages[element][index];
 
-    for (let i = 0; i < 100; i++) {
-        numbers.push(i)
-    }
-    let index = id.slice(8,)
-    let page = pages[element][index]
+  const scrollY = function(e) {
+    let num = e.target.scrollTop
+    cRef.current?.scrollTo(0,num)
+  }
 
-    useEffect(()=>{
-        let readmePath = require(`../pages/${element}/${page['filename']}`)
-
-        fetch(readmePath)
-            .then(response => {
-                return response.text()
-            })
-            .then(text => {
-                setT1(text)
-                console.log(text.split('\n'))
-            })
+  useEffect(() => {
+    let mdPath = require(`../pages/${element}/${page["filename"]}`);
+    fetch(mdPath)
+      .then((response) => {
+        return response.text();
+      })
+      .then((text) => {
+        setT1(text);
         
-    }, [])
-    
-    
-    return (<Draggable handle=".for-drag-page" defaultPosition={{x: 200,y: -680}}>
-       <div className="text-page">
-           <div className="right-main">
-               <div style={{height:'18px'}}></div>
-                <ReactMarkdown remarkPlugins={[remarkGfm]} components={{img: ({node, ...props}) => <img style={{maxWidth: '750px'}}{...props} alt=""/>}}>{t1}</ReactMarkdown>
-           </div>
-           <div className="left-num">
-               <div style={{height:"28px"}}></div>
-               {numbers.map((num)=>{
-                   return (<Number num={num} height={'26'}></Number>)
-               })}
-           </div>
-           <div className="for-drag-page"></div>
-       </div>
-    </Draggable>)
+        const main_html = Array.from(ref.current.children);
+
+        if(main_html.length != heightList.length){
+            let b_offset = 0
+            const newArr = main_html.map((el) => {
+                let n_offset = 2 * (el.offsetTop - b_offset) + el.offsetHeight
+                b_offset += n_offset
+                return n_offset
+            });
+            setHeightList(newArr);
+        }
+      });
+  },[heightList, id]);
+
+  return (
+    <Draggable handle=".for-drag-page" defaultPosition={{ x: 200, y: -680 }}>
+      <div className="text-page">
+        <div className="right-main" ref={ref} onScroll={scrollY}>
+          <div style={{ height: "28px" }}></div>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={{img: ({ node, ...props }) => (
+            <img style={{ maxWidth: "750px" }} {...props} alt="" />),}}>
+            {t1}
+          </ReactMarkdown>
+        </div>
+        <div className="left-num" ref={cRef}>
+          {heightList.map((num, idx) => {
+            return (
+              <Number key={idx}  num={idx - 1} height={num}>
+                {idx}
+              </Number>
+            );
+          })}
+        </div>
+        <div className="for-drag-page"></div>
+      </div>
+    </Draggable>
+  );
 }
 
-function Number({num, height=25}) {
-    return (
-        <div style={{height:`${height}px`}} className="numbers">{num}</div>
-    )
+function Number({ num, height = 25 }) {
+  return (
+    <div style={{ height: `${height}px` }} className="numbers">
+      {num}
+    </div>
+  );
 }
-
-export default Page;
+export default Page; 
