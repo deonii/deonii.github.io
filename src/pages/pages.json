@@ -1,5 +1,11 @@
 {
 	"django": [{
+		"name" : "Django admin delete_selected 이름 변경하기",
+		"date" : "20220519",
+		"datetime" : "2022-05-19 09:12",
+		"filename" : "modified_delete_admin.md"
+	},
+	{
 		"name" : "TDD는 죽었다 - 2",
 		"date" : "20220516",
 		"datetime" : "2022-05-16 01:31",
@@ -10,7 +16,8 @@
 		"date" : "20220515",
 		"datetime" : "2022-05-15 00:06",
 		"filename" : "tdd_is_dead_1.md"
-	}],
+	}
+	],
 	"python": [],
 	"js": []
 }

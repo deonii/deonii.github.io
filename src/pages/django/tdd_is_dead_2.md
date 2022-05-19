@@ -2,7 +2,7 @@
 
 이제 5장의 내용이다.
 
-``` 
+```HTML
 list/templates/home.html
 
 <h1>Your To-Do list</h1>
@@ -31,7 +31,6 @@ CSRF 에러를 해결하기 위해서 {% csrf_token %}를 추가해준다.
 ```
 class Item(models.Model):
 	text = models.TextField(default='')
-
 ```
 
 이런 간단한 모델 또한 에러를 보고 어떤게 필요한지 확인하고 마무리를 한다.   (default가 추가된 이유는 본문에서 생략되었다.)    
