@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router";
 import { useEffect, useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-
+import Exit from './exit';
 
 function Page({ element }) {
   const { id } = useParams();
@@ -114,25 +114,25 @@ function Page({ element }) {
   );
 }
 
-function Exit({element}) {
-    const [exitIcon, setExitIcon] = useState(false);
+// function Exit({element}) {
+//     const [exitIcon, setExitIcon] = useState(false);
 
-    let navigate = useNavigate(); 
+//     let navigate = useNavigate(); 
 
-    const go_to_page = () =>{ 
-        let path = `/${element}`
-        navigate(path);
-    }
+//     const go_to_page = () =>{ 
+//         let path = `/${element}`
+//         navigate(path);
+//     }
 
-    return (<> < div className = {exitIcon ? "exit bar_button hover_icon":"exit bar_button"}
-    onClick = {(e) => {go_to_page()}} 
-    onMouseOver = {()=>{setExitIcon(true)}}
-    onMouseLeave = {()=>{setExitIcon(false)}}
-    > {exitIcon ? 'X': ''}</div>
-    <div className={"disappear bar_button"}></div>
-    <div className={"full_page bar_button"}></div> </>
-    )
-}
+//     return (<> < div className = {exitIcon ? "exit bar_button hover_icon":"exit bar_button"}
+//     onClick = {(e) => {go_to_page()}} 
+//     onMouseOver = {()=>{setExitIcon(true)}}
+//     onMouseLeave = {()=>{setExitIcon(false)}}
+//     > {exitIcon ? 'X': ''}</div>
+//     <div className={"disappear bar_button"}></div>
+//     <div className={"full_page bar_button"}></div> </>
+//     )
+// }
 
 function Number({ num, height = 25 }) {
   return (

@@ -4,7 +4,7 @@ import {Routes, Route, Link} from "react-router-dom";
 
 import Finder from './components/finder';
 import Navbar from './components/navbar';
-import Dock_bar from './components/dock';
+import {Dock_bar} from './components/dock';
 import Page from './components/page';
 
 function App() {

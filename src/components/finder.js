@@ -2,10 +2,19 @@ import Draggable from "react-draggable";
 import {useEffect, useState} from 'react';
 import { Outlet } from "react-router";
 import pages from '../pages/pages.json'
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
+import Exit from './exit';
+import {Dock_icon} from './dock'
 
 function Finder({element}) {
     const [fileList, setFileList] = useState([])
+    const dock_icon_style = {
+        boxSizing: 'border-box',
+        width: '20px',
+        height: '20px',
+        margin: '0px 10px'
+    }
+        
 
     useEffect(()=>{
         let fileList1 = pages[element].map(()=>false)
@@ -16,7 +25,12 @@ function Finder({element}) {
         <>
         <Draggable handle=".for-drag" >
             <div className="finder">
-                <div className="exit-bar"></div>
+                <div className="exit-bar">
+                    <p class="favorite">카테고리</p>
+                    <Link to="/python"><p class="categories"><Dock_icon num="0" style={dock_icon_style}></Dock_icon>Python</p></Link>
+                    <Link to="/django"><p class="categories"><Dock_icon num="1" style={dock_icon_style}></Dock_icon>Django</p></Link>
+                    <Link to="/js"><p class="categories"><Dock_icon num="2" style={dock_icon_style}></Dock_icon>Javascript</p></Link>
+                </div>
                 <div className="drag-bar"></div>
                 <div className="main-div">
                     {
@@ -28,7 +42,9 @@ function Finder({element}) {
                         })
                     }
                 </div>
-                <div className="for-drag"></div>
+                <div className="for-drag">
+                    <Exit element={''}></Exit>
+                </div>
             </div>
         </Draggable>
         <Outlet></Outlet>

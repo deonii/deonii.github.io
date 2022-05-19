@@ -1,6 +1,11 @@
 body {
     overflow: hidden;
 }
+
+a {
+    text-decoration: none;
+}
+
 .board {
     width: 100vw;
     height: 100vh;
@@ -50,15 +55,6 @@ body {
     animation-play-state: running;
 }
 
-.dock-icon {
-    box-sizing: border-box;
-    width: 64px;
-    height: 64px;
-    background-color: white;
-    border: gray 1px solid;
-    border-radius: 15px;
-}
-
 .dock-icon-a {
     margin: auto 0 auto 20px;
 }
@@ -92,6 +88,7 @@ body {
   position: absolute;
   width: 100%;
   height: 50px;
+  display:flex;
 }
 
 .exit-bar {
@@ -222,15 +219,15 @@ pre {
 
 .exit {
     background-color: #fe5f59;
-    margin:9px 0px 9px 15px;
+    margin: auto 0px auto 15px;
 }
 .disappear{
     background-color: #febb2e;
-    margin:9px 0px 9px 8px;
+    margin: auto 0px auto 8px;
 }
 .full_page {
     background-color: #27c840;
-    margin:9px 0px 9px 8px;
+    margin: auto 0px auto 8px;
 }
 
 .bar_button {
@@ -252,4 +249,17 @@ pre {
 .file-name-on-bar {
     margin: auto;
     color: #a8aeb9;
+}
+
+.favorite {
+    margin-top: 50px;
+    padding-left: 10px;
+    color: darkgray;
+    font-size: 12px;
+}
+
+.categories {
+    display:flex;
+    color: white;
+    margin-top: 10px;
 }
