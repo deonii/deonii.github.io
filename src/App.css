@@ -2,6 +2,14 @@ body {
     overflow: hidden;
 }
 
+#search_input:focus {
+    outline: none;
+}
+
+#search_input::placeholder{
+    color:#a7a7a7
+}
+
 a {
     text-decoration: none;
 }
@@ -84,6 +92,11 @@ a {
     border-radius: 10px;
     margin: 100px 400px;
 }
+
+.finder-selected {
+    background-color: #ffffff33;
+}
+
 .for-drag {
   position: absolute;
   width: 100%;
@@ -261,5 +274,7 @@ pre {
 .categories {
     display:flex;
     color: white;
-    margin-top: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px 0px;
 }

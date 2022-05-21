@@ -20,17 +20,25 @@ function Page({ element }) {
     cRef.current?.scrollTo(0,num)
   }
 
-  useEffect(() => {
-    let mdPath = require(`../pages/${element}/${page["filename"]}`);
+  let mdPath = require(`../pages/${element}/${page["filename"]}`);
     fetch(mdPath)
       .then((response) => {
         return response.text();
       })
       .then((text) => {
         setT1(text);
-        make_num_div()
       });
-  },[heightList, id]);
+  // useEffect(() => {
+    // let mdPath = require(`../pages/${element}/${page["filename"]}`);
+    // fetch(mdPath)
+    //   .then((response) => {
+    //     return response.text();
+    //   })
+    //   .then((text) => {
+    //     setT1(text);
+    //     make_num_div()
+    //   });
+  // },[heightList, id]);
 
   function make_num_div() {
     const main_html = Array.from(ref.current.children);
@@ -113,26 +121,6 @@ function Page({ element }) {
     </Draggable>
   );
 }
-
-// function Exit({element}) {
-//     const [exitIcon, setExitIcon] = useState(false);
-
-//     let navigate = useNavigate(); 
-
-//     const go_to_page = () =>{ 
-//         let path = `/${element}`
-//         navigate(path);
-//     }
-
-//     return (<> < div className = {exitIcon ? "exit bar_button hover_icon":"exit bar_button"}
-//     onClick = {(e) => {go_to_page()}} 
-//     onMouseOver = {()=>{setExitIcon(true)}}
-//     onMouseLeave = {()=>{setExitIcon(false)}}
-//     > {exitIcon ? 'X': ''}</div>
-//     <div className={"disappear bar_button"}></div>
-//     <div className={"full_page bar_button"}></div> </>
-//     )
-// }
 
 function Number({ num, height = 25 }) {
   return (

@@ -6,19 +6,30 @@ import Finder from './components/finder';
 import Navbar from './components/navbar';
 import {Dock_bar} from './components/dock';
 import Page from './components/page';
+import Searchbar from './components/searchbar';
 
 function App() {
     let [moveup, setMoveup] = useState(true);
-    // let [moving, setMoving] = useState(false);
+    const [viewSearch, setViewSearch] = useState(false);
 
+    document.onkeydown = (e)=>{   
+        if((e.altKey== true) && (e.code== 'Space')){
+            setViewSearch(true)
+        }
+        if(e.code=='Escape') {
+            setViewSearch(false)
+        }
+    }
     return (
         <div className="App">
             <div
                 className="board"
                 style={{
                     backgroundImage: `url(${process.env.PUBLIC_URL + '/img/board01.jpg'})`
-                }}>
-                <Navbar></Navbar>
+                }}
+                >
+                <Navbar setViewSearch={setViewSearch}></Navbar>
+                
                 <Routes>
                     <Route path="/django" element={<Finder element={"django"}></Finder>}>
                         <Route path=":id" element={<Page element={"django"}></Page>}/>
@@ -29,7 +40,11 @@ function App() {
                     <Route path="/js" element={<Finder element={"js"}></Finder>}>
                         <Route path=":id" element={<Page element={"python"}></Page>}/>
                     </Route>
+                    <Route path=":seach" element={<Finder element={'search'}></Finder>}>
+
+                    </Route>
                 </Routes>
+                <Searchbar viewSearch={viewSearch} setViewSearch={setViewSearch}></Searchbar>
                 <Dock_bar moveup={moveup} setMoveup={setMoveup}></Dock_bar>
             </div>
         </div>

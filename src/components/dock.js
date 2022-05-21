@@ -30,7 +30,6 @@ function Dock_bar({moveup, setMoveup}) {
 }
 
 function Dock_icon({num, style}) {
-    console.log(style)
     let icon_list = ['python', 'django', 'js']
     return (<div className={"dock-icon " + icon_list[num]} style={style}></div>)
 }

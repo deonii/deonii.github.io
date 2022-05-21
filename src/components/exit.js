@@ -16,8 +16,19 @@ function Exit({element}) {
     onMouseOver = {()=>{setExitIcon(true)}}
     onMouseLeave = {()=>{setExitIcon(false)}}
     > {exitIcon ? 'X': ''}</div>
-    <div className={"disappear bar_button"}></div>
-    <div className={"full_page bar_button"}></div> </>
+    < div className = {exitIcon ? "disappear bar_button hover_icon":"disappear bar_button"}
+    onClick = {(e) => {go_to_page()}} 
+    onMouseOver = {()=>{setExitIcon(true)}}
+    onMouseLeave = {()=>{setExitIcon(false)}}
+    > {exitIcon ? '▼': ''}</div>
+    < div className = {exitIcon ? "full_page bar_button hover_icon":"full_page bar_button"}
+    onClick = {(e) => {go_to_page()}} 
+    onMouseOver = {()=>{setExitIcon(true)}}
+    onMouseLeave = {()=>{setExitIcon(false)}}
+    > {exitIcon ? '▲': ''}</div>
+    {/* <div className={"disappear bar_button"}></div>
+    <div className={"full_page bar_button"}></div>  */}
+    </>
     )
 }
 

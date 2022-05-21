@@ -14,11 +14,14 @@ function Finder({element}) {
         height: '20px',
         margin: '0px 10px'
     }
+    console.log(element)
         
 
     useEffect(()=>{
+        if(element != 'search'){
         let fileList1 = pages[element].map(()=>false)
         setFileList(fileList1)
+        }
     }, [element])
 
     return (
@@ -27,20 +30,27 @@ function Finder({element}) {
             <div className="finder">
                 <div className="exit-bar">
                     <p class="favorite">카테고리</p>
-                    <Link to="/python"><p class="categories"><Dock_icon num="0" style={dock_icon_style}></Dock_icon>Python</p></Link>
-                    <Link to="/django"><p class="categories"><Dock_icon num="1" style={dock_icon_style}></Dock_icon>Django</p></Link>
-                    <Link to="/js"><p class="categories"><Dock_icon num="2" style={dock_icon_style}></Dock_icon>Javascript</p></Link>
+                    <Link to="/python">
+                        <p class={element == 'python' ? 'categories finder-selected' : 'categories'}>
+                            <Dock_icon num="0" style={dock_icon_style}></Dock_icon>Python</p></Link>
+                    <Link to="/django">
+                        <p class={element == 'django' ? 'categories finder-selected' : 'categories'}>
+                            <Dock_icon num="1" style={dock_icon_style}></Dock_icon>Django</p></Link>
+                    <Link to="/js">
+                        <p class={element == 'js' ? 'categories finder-selected' : 'categories'}>
+                            <Dock_icon num="2" style={dock_icon_style}></Dock_icon>Javascript</p></Link>
                 </div>
                 <div className="drag-bar"></div>
                 <div className="main-div">
                     {
+                        element != 'search' ?
                         pages[element].map((page,i)=>{
                             return (
                                 <File key={i} name={page.name} index={i} element={element} date={page.date} 
                                 fileList={fileList} setFileList={setFileList}/>
                             )
-                        })
-                    }
+                        }) : ''
+                    } 
                 </div>
                 <div className="for-drag">
                     <Exit element={''}></Exit>
