@@ -37,9 +37,6 @@ function Searchbar({viewSearch, setViewSearch}) {
     
     useEffect(()=>{
         setInputValue('')
-        // if (inputRef.current !== null) {
-        //     inputRef.current.focus();
-        // }
     }, [viewSearch])
     if(viewSearch) {
     }

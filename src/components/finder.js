@@ -1,28 +1,60 @@
 import Draggable from "react-draggable";
 import {useEffect, useState} from 'react';
-import { Outlet } from "react-router";
+import { Outlet, useParams } from "react-router";
 import pages from '../pages/pages.json'
 import { useNavigate, Link } from "react-router-dom"
 import Exit from './exit';
 import {Dock_icon} from './dock'
 
 function Finder({element}) {
+    const { search } = useParams();
     const [fileList, setFileList] = useState([])
+    const [searchList, setSearchList] = useState([])
     const dock_icon_style = {
         boxSizing: 'border-box',
         width: '20px',
         height: '20px',
         margin: '0px 10px'
     }
-    console.log(element)
-        
+
+    const finder_name_style = {
+        color: "#fafafa",
+        position: 'relative',
+        top: '11px',
+        left: '50px',
+        fontSize: '24px',
+    }
+
+    const finder_search_input = {
+        // marginLeft: 'auto',
+        // marginRight: '20px',
+        height: '20px',
+        margin: 'auto 20px auto auto'
+
+    }
 
     useEffect(()=>{
         if(element != 'search'){
-        let fileList1 = pages[element].map(()=>false)
-        setFileList(fileList1)
+            let fileList1 = pages[element].map(()=>false)
+            setFileList(fileList1)
+            
+        } else {
+            let searchList1 = []
+            for (let key in pages){
+                pages[key].map(
+                    (e)=>{
+                        let values = Object.values(e)
+                        if(values.some((r)=>{return r.includes(search)})) {
+                            searchList1.push(e)
+                        }
+                    })
+            }
+            setSearchList(searchList1)
+            let fileList1 = searchList1.map(()=>false)
+            setFileList(fileList1)
         }
-    }, [element])
+
+    }, [element, search])
 
     return (
         <>
@@ -31,16 +63,18 @@ function Finder({element}) {
                 <div className="exit-bar">
                     <p class="favorite">카테고리</p>
                     <Link to="/python">
-                        <p class={element == 'python' ? 'categories finder-selected' : 'categories'}>
+                        <p class={element == 'Python' ? 'categories finder-selected' : 'categories'}>
                             <Dock_icon num="0" style={dock_icon_style}></Dock_icon>Python</p></Link>
                     <Link to="/django">
-                        <p class={element == 'django' ? 'categories finder-selected' : 'categories'}>
+                        <p class={element == 'Django' ? 'categories finder-selected' : 'categories'}>
                             <Dock_icon num="1" style={dock_icon_style}></Dock_icon>Django</p></Link>
                     <Link to="/js">
-                        <p class={element == 'js' ? 'categories finder-selected' : 'categories'}>
+                        <p class={element == 'JS' ? 'categories finder-selected' : 'categories'}>
                             <Dock_icon num="2" style={dock_icon_style}></Dock_icon>Javascript</p></Link>
                 </div>
-                <div className="drag-bar"></div>
+                <div className="drag-bar">
+                    <span style={finder_name_style}>{element}</span>
+                </div>
                 <div className="main-div">
                     {
                         element != 'search' ?
@@ -49,11 +83,17 @@ function Finder({element}) {
                                 <File key={i} name={page.name} index={i} element={element} date={page.date} 
                                 fileList={fileList} setFileList={setFileList}/>
                             )
-                        }) : ''
+                        }) : searchList.map((page,i)=>{
+                            return (
+                                <File key={i} name={page.name} index={i} element={element} date={page.date} 
+                                fileList={fileList} setFileList={setFileList}/>
+                            )
+                        })
                     } 
                 </div>
                 <div className="for-drag">
                     <Exit element={''}></Exit>
+                    {/* <input style={finder_search_input}></input> */}
                 </div>
             </div>
         </Draggable>

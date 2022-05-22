@@ -1,5 +1,5 @@
 {
-	"django": [{
+	"Django": [{
 		"name" : "Django admin delete_selected 이름 변경하기",
 		"date" : "20220519",
 		"datetime" : "2022-05-19 09:12",
@@ -18,6 +18,6 @@
 		"filename" : "tdd_is_dead_1.md"
 	}
 	],
-	"python": [],
-	"js": []
+	"Python": [],
+	"JS": []
 }

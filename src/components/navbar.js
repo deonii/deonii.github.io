@@ -4,6 +4,7 @@ import {faSearch} from '@fortawesome/free-solid-svg-icons'
 import {ReactComponent as Option_key} from '../svg/mac-option-key.svg'
 import {ReactComponent as Space_key} from '../svg/space.svg'
 import {ReactComponent as Plus} from '../svg/plus.svg'
+import { useNavigate } from 'react-router';
 
 function Navbar({setViewSearch}) {
     const [navover, setNavover] = useState(false);
@@ -31,10 +32,16 @@ function Navbar({setViewSearch}) {
             `${nowdatelist[0]}년 ${nowdatelist[1]}월 ${nowdatelist[2]}일 (${weekday_ko[nowtime.getDay()]})`
         )
     })
+    let navigate = useNavigate()
+    const go_to_page = () =>{ 
+        let path = `/`
+    navigate(path);
+    }  
 
     return (
         <div className="navbar">
             <img
+                onClick={()=>go_to_page()}
                 onMouseOver={() => {
                     setNavover(true)
                 }}
