@@ -20,7 +20,7 @@ function Navbar({setViewSearch}) {
     const weekday_ko = [
         '일',
         '월',
-        '화',
+        '화',
         '수',
         '목',
         '금',

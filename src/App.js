@@ -31,14 +31,14 @@ function App() {
                 <Navbar setViewSearch={setViewSearch}></Navbar>
                 
                 <Routes>
-                    <Route path="/django" element={<Finder element={"Django"}></Finder>}>
-                        <Route path=":id" element={<Page element={"Django"}></Page>}/>
+                    <Route path="/django" element={<Finder element={"django"}></Finder>}>
+                        <Route path=":id" element={<Page element={"django"}></Page>}/>
                     </Route>
-                    <Route path="/python" element={<Finder element={"Python"}></Finder>}>
-                        <Route path=":id" element={<Page element={"Python"}></Page>}/>
+                    <Route path="/python" element={<Finder element={"python"}></Finder>}>
+                        <Route path=":id" element={<Page element={"python"}></Page>}/>
                     </Route>
-                    <Route path="/js" element={<Finder element={"JS"}></Finder>}>
-                        <Route path=":id" element={<Page element={"JS"}></Page>}/>
+                    <Route path="/js" element={<Finder element={"js"}></Finder>}>
+                        <Route path=":id" element={<Page element={"js"}></Page>}/>
                     </Route>
                     <Route path=":search" element={<Finder element={'search'}></Finder>}>
                     </Route>
