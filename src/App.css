@@ -183,16 +183,17 @@ a {
 }
 
 .right-main {
-    width: calc(100% - 50px);
+    width: 100%;
     height: 100%;
-    float: right;
     background-color: #343d46;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+/*    border-top-right-radius: 10px;*/
+/*    border-bottom-right-radius: 10px;*/
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     overflow: auto;
     color: #ccd2dd;
     font-weight: 600;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 0px;
     box-sizing: border-box;
     display:grid;
     line-height: 175%;
@@ -210,12 +211,20 @@ a {
 }
 
 .numbers {
+    width: 50px;
+    height: 100%;
+    background-color: #3d4751;
     box-sizing: border-box;
     border-bottom: #838d98 1px solid;
     text-align: center;
     color:#838d98;
     font-weight: 600;
     padding-top: 5px;
+    margin-right: 10px;
+}
+
+.markdown-comp {
+    display: flex;
 }
 
 pre {

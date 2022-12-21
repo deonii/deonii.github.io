@@ -6,7 +6,9 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Exit from './exit';
 
+
 function Page({ element }) {
+  let j = 0
   const { id } = useParams();
   const [t1, setT1] = useState("");
   const [heightList, setHeightList] = useState([]);
@@ -28,92 +30,133 @@ function Page({ element }) {
       .then((text) => {
         setT1(text);
       });
-  // useEffect(() => {
-    // let mdPath = require(`../pages/${element}/${page["filename"]}`);
-    // fetch(mdPath)
-    //   .then((response) => {
-    //     return response.text();
-    //   })
-    //   .then((text) => {
-    //     setT1(text);
-    //     make_num_div()
-    //   });
-  // },[heightList, id]);
-
-  function make_num_div() {
-    const main_html = Array.from(ref.current.children);
-
-    if(main_html.length != heightList.length){
-        let b_offset = 0
-        const newArr = main_html.map((el) => {
-            let n_offset = 2 * (el.offsetTop - b_offset) + el.offsetHeight
-            b_offset += n_offset
-            return n_offset
-        });
-        setHeightList(newArr);
-    }
-  }
 
   return (
     <Draggable handle=".for-drag-page" defaultPosition={{ x: 200, y: -680 }} >
       <div className="text-page">
         <div className="right-main" ref={ref} onScroll={scrollY}>
           <div style={{ height: "28px" }}></div>
-          <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
-              img: ({ node, ...props }) => (
-            <img onLoad={make_num_div} style={{ maxWidth: "750px" }} {...props} alt="" />),
-            blockquote: ({node, ...props}) => (
-                <blockquote style={{
-                    color: "#343d46",
-                    marginLeft: "0px",
-                    marginRight: "0px",
-                    paddingLeft: "20px",
-                    paddingRight: "20px",
-                    borderLeft: "5px solid #6e7680",
-                    backgroundColor: "#f3f3f3"
-                }} {...props}/>),
-            h1: ({node, ...props}) => (
-                <h1 style={{
-                    borderBottom: "1px solid",
-                    margin: "0px",
-                    padding: "20px"
-                }} {...props}/>),
-            h2: ({node, ...props}) => (
-                <h2 style={{
-                    borderBottom: "1px solid",
-                    margin: "0px",
-                    padding: "18px"
-                }} {...props}/>),
-            h3: ({node, ...props}) => (
-                <h3 style={{
-                    borderBottom: "1px solid",
-                    margin: "0px",
-                    padding: "16px"
-                }} {...props}/>),
-            a: ({node, ...props}) => (
-                <a onClick={(e)=>{
-                    e.preventDefault()
-                    window.open(e.target.href, '_blank')
-                }}
-                style={{
-                    textDecoration: "none",
-                    boxShadow: "0 -8px #00000080 inset",
-                    color: "#91969b"
-                }} {...props}/>
-            )
-
-                    }}>
-            {t1}
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
+                img: ({ node, ...props }) => (
+                        <img style={{ maxWidth: "750px" }} {...props} alt="" />
+                        ),
+                blockquote: ({children, ...props}) => (
+                        console.log(props),
+                        props ?
+                        <div className="markdown-comp">
+                            <div className='numbers'>{j++, j}</div>
+                            <blockquote
+                                children={children}
+                                style={{
+                                color: "#343d46",
+                                marginLeft: "0px",
+                                marginRight: "0px",
+                                paddingLeft: "20px",
+                                paddingRight: "20px",
+                                borderLeft: "5px solid #6e7680",
+                                backgroundColor: "#f3f3f3",
+                                margin: '10px 0px 10px 10px',
+                                maxwidth: '1100px'
+                            }} {...props}/>
+                        </div> :
+                                <blockquote
+                                    children={children}
+                                    style={{
+                                    color: "#343d46",
+                                        marginLeft: "0px",
+                                        marginRight: "0px",
+                                        paddingLeft: "20px",
+                                        paddingRight: "20px",
+                                        borderLeft: "5px solid #6e7680",
+                                        backgroundColor: "#f3f3f3",
+                                        margin: '10px 0px 10px 10px',
+                                        maxwidth: '1100px'
+                                }} {...props}/>
+                        ),
+                h1: ({node, ...props}) => (
+                        <div className="markdown-comp">
+                            <div className='numbers'>{j++, j}</div>
+                            <h1 style={{
+                                borderBottom: "1px solid",
+                                padding: "20px",
+                                width: "1060px",
+                                margin: "0px 0px 0px 10px"
+                            }} {...props}/>
+                        </div>),
+                h2: ({node, ...props}) => (
+                        <div className="markdown-comp">
+                            <div className='numbers'>{j++, j}</div>
+                            <h2 style={{
+                                borderBottom: "1px solid",
+                                padding: "18px",
+                                width: "1060px",
+                                margin: "0px 0px 0px 10px"
+                            }} {...props}/>
+                        </div>),
+                h3: ({node, ...props}) => (
+                        <div className="markdown-comp">
+                            <div className='numbers'>{j++, j}</div>
+                            <h3 style={{
+                                borderBottom: "1px solid",
+                                padding: "16px",
+                                width: "1060px",
+                                margin: "0px 0px 0px 10px"
+                            }} {...props}/>
+                        </div>),
+                a: ({node, ...props}) => (
+                        <div className="markdown-comp">
+                            <a onClick={(e)=>{
+                                e.preventDefault()
+                                window.open(e.target.href, '_blank')
+                            }}
+                                style={{
+                                textDecoration: "none",
+                                    boxShadow: "0 -8px #00000080 inset",
+                                    color: "#91969b",
+                                }} {...props}/>
+                        </div>
+                        ),
+                p: ({node,...props}) => (
+                        node.position.start.column ==1 ?
+                        <div className="markdown-comp">
+                            {
+                                <div className='numbers'>{j++, j}</div>
+                            }
+                            <p
+                                style={{
+                                margin: "16px 10px",
+                                    maxWidth: '1100px'
+                            }}{...props}/>
+                        </div> :
+                                <p
+                                    style={{
+                                    margin: "16px 10px",
+                                        maxWidth: '1100px'
+                                }}{...props}/>
+                        ),
+                pre: ({node, ...props}) => (
+                        <div className="markdown-comp">
+                            <div className='numbers'>{j++, j}</div>
+                            <pre style={{
+                                margin: "14px 0px 14px 10px",
+                                width:"1085px"
+                            }} {...props}/>
+                      </div>
+                      ),
+                ul: ({depth, ...props}) => (
+                        console.log(depth),
+                        depth === 0 ?
+                      <div className="markdown-comp">
+                          <div className='numbers'>{j++, j}</div>
+                          <ul style={{
+                          }} {...props}/>
+                      </div> :
+                                <ul style={{
+                                }} {...props}/>
+                      )
+          }}>
+                {t1}
           </ReactMarkdown>
-        </div>
-        <div className="left-num" ref={cRef}>
-          {heightList.map((num, idx) => {
-            return (
-              <Number key={idx}  num={idx - 1} height={num}>
-                {idx}
-              </Number>
-            );
-          })}
         </div>
         <div className="for-drag-page"> <Exit element={element}></Exit>
         <p className="file-name-on-bar">{page['filename']} &nbsp;  {page['datetime']}</p></div>
@@ -122,12 +165,5 @@ function Page({ element }) {
   );
 }
 
-function Number({ num, height = 25 }) {
-  return (
-    <div style={{ height: `${height}px` }} className="numbers">
-      {num}
-    </div>
-  );
-}
 
 export default Page; 

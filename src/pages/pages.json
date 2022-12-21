@@ -1,5 +1,10 @@
 {
-	"django": [{
+    "django": [{
+        "name" : "Django admin 사용 가이드",
+        "date" : "20220520",
+        "datetime" : "2022-05-20 10:10",
+        "filename" : "django_admin_guide.md"
+    },{
 		"name" : "Django admin delete_selected 이름 변경하기",
 		"date" : "20220519",
 		"datetime" : "2022-05-19 09:12",
