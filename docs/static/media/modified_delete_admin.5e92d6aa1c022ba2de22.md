@@ -91,7 +91,13 @@ class BookAdmin(admin.ModelAdmin):
 print를 통해 actions에 무엇이 담겨있는지 확인해보자.
 
 ```
-{'delete_selected': (<function delete_selected at 0x7ff30840f200>, 'delete_selected', 'Delete selected %(verbose_name_plural)s')}
+{
+    'delete_selected': (
+            <function delete_selected at 0x7ff30840f200>,
+            'delete_selected',
+            'Delete selected %(verbose_name_plural)s'
+            )
+        }
 ```
 
 보아하니 action이름을 키로 가지고 해당 action에 필요한 내용을 tuple로 가지는 딕셔너리다.
