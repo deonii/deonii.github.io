@@ -40,6 +40,9 @@ function App() {
                     <Route path="/js" element={<Finder element={"js"}></Finder>}>
                         <Route path=":id" element={<Page element={"js"}></Page>}/>
                     </Route>
+                    <Route path="/java" element={<Finder element={"java"}></Finder>}>
+                        <Route path=":id" element={<Page element={"java"}></Page>}/>
+                    </Route>
                     <Route path=":search" element={<Finder element={'search'}></Finder>}>
                     </Route>
                 </Routes>

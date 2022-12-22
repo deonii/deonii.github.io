@@ -85,6 +85,12 @@ a {
     background-image: url("../public/img/javascript.png");
 }
 
+.java {
+    background-size: 100% 100%;
+    background-position: center;
+    background-image: url("../public/img/java.png");
+}
+
 .finder {
     width: 1000px;
     height: 500px;
@@ -197,6 +203,7 @@ a {
     box-sizing: border-box;
     display:grid;
     line-height: 175%;
+    overflow-x: hidden
 }
 
 .for-drag-page {
