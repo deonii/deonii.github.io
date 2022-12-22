@@ -41,7 +41,6 @@ function Page({ element }) {
                         <img style={{ maxWidth: "750px" }} {...props} alt="" />
                         ),
                 blockquote: ({children, ...props}) => (
-                        console.log(props),
                         props ?
                         <div className="markdown-comp">
                             <div className='numbers'>{j++, j}</div>
@@ -56,7 +55,7 @@ function Page({ element }) {
                                 borderLeft: "5px solid #6e7680",
                                 backgroundColor: "#f3f3f3",
                                 margin: '10px 0px 10px 10px',
-                                maxwidth: '1100px'
+                                maxWidth: '1030px'
                             }} {...props}/>
                         </div> :
                                 <blockquote
@@ -70,7 +69,7 @@ function Page({ element }) {
                                         borderLeft: "5px solid #6e7680",
                                         backgroundColor: "#f3f3f3",
                                         margin: '10px 0px 10px 10px',
-                                        maxwidth: '1100px'
+                                        maxWidth: '900px'
                                 }} {...props}/>
                         ),
                 h1: ({node, ...props}) => (
@@ -94,6 +93,7 @@ function Page({ element }) {
                             }} {...props}/>
                         </div>),
                 h3: ({node, ...props}) => (
+                        node.position.start.column ==1 ?
                         <div className="markdown-comp">
                             <div className='numbers'>{j++, j}</div>
                             <h3 style={{
@@ -102,7 +102,14 @@ function Page({ element }) {
                                 width: "1060px",
                                 margin: "0px 0px 0px 10px"
                             }} {...props}/>
-                        </div>),
+                        </div> :
+                                <h3 style={{
+                                    borderBottom: "1px solid",
+                                    padding: "16px",
+                                    width: "1060px",
+                                    margin: "0px 0px 0px 10px"
+                                }} {...props}/>
+                        ),
                 a: ({node, ...props}) => (
                         <div className="markdown-comp">
                             <a onClick={(e)=>{
@@ -125,7 +132,7 @@ function Page({ element }) {
                             <p
                                 style={{
                                 margin: "16px 10px",
-                                    maxWidth: '1100px'
+                                    maxWidth: '1080px'
                             }}{...props}/>
                         </div> :
                                 <p
@@ -139,7 +146,8 @@ function Page({ element }) {
                             <div className='numbers'>{j++, j}</div>
                             <pre style={{
                                 margin: "14px 0px 14px 10px",
-                                width:"1085px"
+                                width:"1030px",
+                                padding: "20px"
                             }} {...props}/>
                       </div>
                       ),
