@@ -1,4 +1,4 @@
-# java 1일차
+# Java - 1
 
 - 목차
     1. System.out.println()

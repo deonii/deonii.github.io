@@ -26,9 +26,15 @@
 	"python": [],
 	"js": [],
     "java": [{
-        "name" : "자바 기초 - 1",
+        "name" : "Java - 2",
+        "date" : "20221223",
+        "datetime" : "2022-12-23 12:01",
+        "filename" : "java_start_02.md"
+    },{
+        "name" : "Java - 1",
         "date" : "20221222",
         "datetime" : "2022-12-22 14:32",
         "filename" : "java_start_01.md"
-    }]
+    }
+    ]
 }

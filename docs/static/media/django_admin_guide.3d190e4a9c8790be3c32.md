@@ -1,29 +1,29 @@
-
+# Django admin 사용 가이드
 
 ※ 본 가이드는 프로젝트 초기 세팅 및 프로젝트 구성 방법에 대해 다루지 않습니다. ※
 
 
-# 프로젝트 구성
+## 프로젝트 구성
 
 ```bash
 project_name/
-apps/
-__init__.py
-settings.py
-urls.py
-wsgi.py
-books/
-migrations/
-templates/
-__init__.py
-admin.py
-apps.py
-models.py
-tests.py
-views.py
-urls.py
-venv/
-manage.py
+    apps/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+    books/
+        migrations/
+        __init__.py
+        admin.py
+        apps.py
+        models.py
+        tests.py
+        views.py
+        urls.py
+    templates/
+    venv/
+    manage.py
 ```
 
 ## settings.py 확인 사항
@@ -40,25 +40,25 @@ manage.py
 from django.db import models
 
 PUBLISHING_CODE = (
-(1, ('Pending')),
-(2, ('Accepted')),
-(3, ('Canceled')),
-(4, ('Rejected')),
+    (1, ('Pending')),
+    (2, ('Accepted')),
+    (3, ('Canceled')),
+    (4, ('Rejected')),
 )
 
 class Author(models.Model):
-name = models.CharField(max_length=100)
-title = models.CharField(max_length=300)
-birth_date = models.DateField(blank=True, null=True)
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=300)
+    birth_date = models.DateField(blank=True, null=True)
 
 class Genre(models.Model):
-genre_name = models.CharField(max_length=100)
+    genre_name = models.CharField(max_length=100)
 
 class Book(models.Model):
-author = models.ForeignKey(Author, on_delete=models.CASCADE)
-title = models.CharField(max_length=100)
-genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-status = models.SmallIntegerField(choices=PUBLISHING_CODE, default=2)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
+    status = models.SmallIntegerField(choices=PUBLISHING_CODE, default=2)
 ```
 
 
@@ -116,18 +116,18 @@ from books.models import Author, Genre, Book
 
 # 방법 1
 class AuthorAdmin(admin.ModelAdmin):
-pass
+    pass
 
 admin.site.register(Author, AuthorAdmin)
 
 # 방법 2
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-pass
+    pass
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
-pass
+    pass
 ```
 
 admin.ModelAdmin를 상속받은 클래스 선언 후 admin.site.register(모델명, 클래스명)을 등록하는것과@admin.register(모델명)을 데코레이터로 등록한 클래스는 기존에 admin.site.register()를 통해 등록한것과 동일한 결과를 보여줍니다.
@@ -139,7 +139,7 @@ admin.ModelAdmin를 상속받은 클래스 선언 후 admin.site.register(모델
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-list_display = ('id', 'author', 'title', 'genre', 'status')
+    list_display = ('id', 'author', 'title', 'genre', 'status')
 ```
 
 선언한 AuthorAdmin내에 list_display를 튜플 또는 리스트 형식으로 원하는 컬럼값을 등록해줍니다.
@@ -156,13 +156,13 @@ list_display = ('id', 'author', 'title', 'genre', 'status')
 # books/models.py
 
 class Book(models.Model):
-author = models.ForeignKey(Author, on_delete=models.CASCADE)
-title = models.CharField(max_length=100)
-genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-status = models.SmallIntegerField(choices=PUBLISHING_CODE, default=2)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
+    status = models.SmallIntegerField(choices=PUBLISHING_CODE, default=2)
 
 def tilte_for_html(self):
-return '<b>' + self.title + '</b>'
+    return '<b>' + self.title + '</b>'
 ```
 
 ```python
@@ -170,7 +170,7 @@ return '<b>' + self.title + '</b>'
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-list_display = ('id', 'author', 'tilte_for_html', 'genre', 'status')
+    list_display = ('id', 'author', 'tilte_for_html', 'genre', 'status')
 ```
 
 - 변경된 목록 뷰 모습
@@ -185,11 +185,11 @@ ForeignKey(xxx objects (1))가 보이는것 또한 변경이 가능합니다.
 # books/models.py
 
 class Author(models.Model):
-name = models.CharField(max_length=100)
-birth_date = models.DateField(blank=True, null=True)
+    name = models.CharField(max_length=100)
+    birth_date = models.DateField(blank=True, null=True)
 
 def __str__(self):
-return self.name
+    return self.name
 ```
 
 - 변경된 목록 뷰 모습
@@ -203,8 +203,8 @@ return self.name
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-list_display = ('id', 'author', 'tilte_for_html', 'genre', 'status')
-list_per_page = 10
+    list_display = ('id', 'author', 'tilte_for_html', 'genre', 'status')
+    list_per_page = 10
 ```
 
 list_per_page 를 통해 페이지 별 목록 개수 설정이 가능합니다.
@@ -216,9 +216,9 @@ list_per_page 를 통해 페이지 별 목록 개수 설정이 가능합니다.
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-list_display = ('id', 'author', 'tilte_for_html', 'genre', 'status')
-readonly_fields = ('author', 'title', 'genre')
-list_per_page = 10
+    list_display = ('id', 'author', 'tilte_for_html', 'genre', 'status')
+    readonly_fields = ('author', 'title', 'genre')
+    list_per_page = 10
 ```
 
 - 변경된 수정 페이지 모습
@@ -232,10 +232,10 @@ list_per_page = 10
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-list_display = ('id', 'author', 'tilte_for_html', 'genre', 'status')
-readonly_fields = ('author', 'title', 'genre')
-list_per_page = 10
-fields = ['author', ('title','genre'), 'status']
+    list_display = ('id', 'author', 'tilte_for_html', 'genre', 'status')
+    readonly_fields = ('author', 'title', 'genre')
+    list_per_page = 10
+    fields = ['author', ('title','genre'), 'status']
 ```
 
 fields를 선언함으로서 수정 페이지 내 순서 및 수평적 표시가 가능합니다.
@@ -259,27 +259,27 @@ python manage.py collectstatic
 
 ```bash
 project_name/
-apps/
-__init__.py
-settings.py
-urls.py
-wsgi.py
-books/
-migrations/
-static/
-admin/
-templates/
-admin/
-registration/
-__init__.py
-admin.py
-apps.py
-models.py
-tests.py
-views.py
-urls.py
-venv/
-manage.py
+    apps/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+    books/
+        migrations/
+        __init__.py
+        admin.py
+        apps.py
+        models.py
+        tests.py
+        views.py
+        urls.py
+    static/
+        admin/
+    templates/
+        admin/
+        registration/
+    venv/
+    manage.py
 ```
 
 원하는 페이지의 html파일을 찾아 수정합니다.
