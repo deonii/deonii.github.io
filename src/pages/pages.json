@@ -26,6 +26,11 @@
 	"python": [],
 	"js": [],
     "java": [{
+        "name" : "Java - 3",
+        "date" : "20221223",
+        "datetime" : "2022-12-25 00:21",
+        "filename" : "java_start_03.md"
+    },{
         "name" : "Java - 2",
         "date" : "20221223",
         "datetime" : "2022-12-23 12:01",
