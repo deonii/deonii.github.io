@@ -68,12 +68,12 @@ function Finder({element}) {
                     <Link to="/django">
                         <p class={element == 'django' ? 'categories finder-selected' : 'categories'}>
                             <Dock_icon num="1" style={dock_icon_style}></Dock_icon>Django</p></Link>
-                    <Link to="/js">
-                        <p class={element == 'js' ? 'categories finder-selected' : 'categories'}>
-                            <Dock_icon num="2" style={dock_icon_style}></Dock_icon>Javascript</p></Link>
                     <Link to="/java">
                         <p class={element == 'java' ? 'categories finder-selected' : 'categories'}>
-                            <Dock_icon num="3" style={dock_icon_style}></Dock_icon>Java</p></Link>
+                            <Dock_icon num="2" style={dock_icon_style}></Dock_icon>Java</p></Link>
+                    <Link to="/cs">
+                        <p class={element == 'cs' ? 'categories finder-selected' : 'categories'}>
+                            <Dock_icon num="3" style={dock_icon_style}></Dock_icon>Computer Science</p></Link>
                 </div>
                 <div className="drag-bar">
                     <span style={finder_name_style}>{element}</span>

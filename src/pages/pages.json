@@ -24,7 +24,6 @@
 	}
 	],
 	"python": [],
-	"js": [],
     "java": [{
         "name" : "Java - 3",
         "date" : "20221223",
@@ -41,5 +40,6 @@
         "datetime" : "2022-12-22 14:32",
         "filename" : "java_start_01.md"
     }
-    ]
+    ],
+    "cs": []
 }

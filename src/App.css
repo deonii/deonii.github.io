@@ -79,16 +79,22 @@ a {
     background-image: url("../public/img/django.png");
 }
 
-.js {
-    background-size: 100% 100%;
-    background-position: center;
-    background-image: url("../public/img/javascript.png");
-}
+/*.js {*/
+/*    background-size: 100% 100%;*/
+/*    background-position: center;*/
+/*    background-image: url("../public/img/javascript.png");*/
+/*}*/
 
 .java {
     background-size: 100% 100%;
     background-position: center;
     background-image: url("../public/img/java.png");
+}
+
+.cs {
+    background-size: 100% 100%;
+    background-position: center;
+    background-image: url("../public/img/computer.png");
 }
 
 .finder {

@@ -37,11 +37,11 @@ function App() {
                     <Route path="/python" element={<Finder element={"python"}></Finder>}>
                         <Route path=":id" element={<Page element={"python"}></Page>}/>
                     </Route>
-                    <Route path="/js" element={<Finder element={"js"}></Finder>}>
-                        <Route path=":id" element={<Page element={"js"}></Page>}/>
-                    </Route>
                     <Route path="/java" element={<Finder element={"java"}></Finder>}>
                         <Route path=":id" element={<Page element={"java"}></Page>}/>
+                    </Route>
+                    <Route path="/cs" element={<Finder element={"cs"}></Finder>}>
+                        <Route path=":id" element={<Page element={"cs"}></Page>}/>
                     </Route>
                     <Route path=":search" element={<Finder element={'search'}></Finder>}>
                     </Route>

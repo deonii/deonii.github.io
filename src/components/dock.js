@@ -22,10 +22,10 @@ function Dock_bar({moveup, setMoveup}) {
             <Link className="dock-icon-a" to="/django">
                 <Dock_icon num="1" style={dock_icon_style}></Dock_icon>
             </Link>
-            <Link className="dock-icon-a" to="/js">
+            <Link className="dock-icon-a" to="/java">
                 <Dock_icon num="2" style={dock_icon_style}></Dock_icon>
             </Link>
-            <Link className="dock-icon-a" to="/java">
+            <Link className="dock-icon-a" to="/cs">
                 <Dock_icon num="3" style={dock_icon_style}></Dock_icon>
             </Link>
         </div>
@@ -33,7 +33,7 @@ function Dock_bar({moveup, setMoveup}) {
 }
 
 function Dock_icon({num, style}) {
-    let icon_list = ['python', 'django', 'js', 'java']
+    let icon_list = ['python', 'django', 'java', 'cs']
     return (<div className={"dock-icon " + icon_list[num]} style={style}></div>)
 }
 
