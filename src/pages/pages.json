@@ -41,5 +41,10 @@
         "filename" : "java_start_01.md"
     }
     ],
-    "cs": []
+    "cs": [{
+        "name" : "운영체제 맛보기",
+        "date" : "20221226",
+        "datetime" : "2022-12-26 14:36",
+        "filename" : "os_summary.md"
+    }]
 }

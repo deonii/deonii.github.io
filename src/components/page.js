@@ -76,9 +76,9 @@ function Page({ element }) {
                         <div className="markdown-comp">
                             <div className='numbers'>{j++, j}</div>
                             <h1 style={{
-                                borderBottom: "1px solid",
+                                borderBottom: "4px solid",
                                 padding: "20px",
-                                width: "1060px",
+                                width: "1000px",
                                 margin: "0px 0px 0px 10px"
                             }} {...props}/>
                         </div>),
@@ -86,9 +86,9 @@ function Page({ element }) {
                         <div className="markdown-comp">
                             <div className='numbers'>{j++, j}</div>
                             <h2 style={{
-                                borderBottom: "1px solid",
+                                borderBottom: "2px solid",
                                 padding: "18px",
-                                width: "1060px",
+                                width: "800px",
                                 margin: "0px 0px 0px 10px"
                             }} {...props}/>
                         </div>),
@@ -97,9 +97,9 @@ function Page({ element }) {
                         <div className="markdown-comp">
                             <div className='numbers'>{j++, j}</div>
                             <h3 style={{
-                                borderBottom: "1px solid",
+                                borderBottom: "0.5px solid",
                                 padding: "16px",
-                                width: "1060px",
+                                width: "500px",
                                 margin: "0px 0px 0px 10px"
                             }} {...props}/>
                         </div> :
