@@ -25,6 +25,11 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "Java - 6",
+        "date" : "20221227",
+        "datetime" : "2022-12-27 18:51",
+        "filename" : "java_start_06.md"
+    },{
         "name" : "Java - 5",
         "date" : "20221227",
         "datetime" : "2022-12-27 00:25",

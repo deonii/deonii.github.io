@@ -5,8 +5,7 @@
     2. 문자 데이터
     3. 조건문
     4. switch
-    5. 사용자 입력 받기
-    6. 삼항 연산자
+    5. 삼항 연산자
 
 ## 논리 연산자
 
@@ -108,26 +107,6 @@ switch (i) {
 ```
 
 그리고 long, double, boolean 타입은 switch 사용이 불가능하다.
-
-
-## 사용자 입력 받기
-
-사용자 입력을 받는 방법이다.
-
-```
-import java.util.Scanner; // 필요한 모듈을 불러온다.
-
-public class MenuRunner {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // 입력받는 인스턴스를 생성한다.
-        int number1 = scanner.nextInt(); // scanner의 메서드를 통해 int, float 등 다양한 입력을 선택할 수 있다.
-        System.out.println("입력한 숫자는..? " + number1");
-    }
-}
-
-123
-=> 입력한 숫자는..? 123
-```
 
 ## 삼항 연산자
 

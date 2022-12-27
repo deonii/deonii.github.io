@@ -161,7 +161,15 @@ function Page({ element }) {
                       </div> :
                                 <ul style={{
                                 }} {...props}/>
-                      )
+                      ),
+                table: ({node, ...props}) => (
+                        <div className="markdown-comp">
+                            <div className='numbers'>{j++, j}</div>
+                            <table style={{
+                                
+                            }} {...props}/>
+                        </div>
+                        )
           }}>
                 {t1}
           </ReactMarkdown>

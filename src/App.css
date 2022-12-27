@@ -300,3 +300,17 @@ pre {
     border-radius: 5px;
     padding: 5px 0px;
 }
+
+  table {
+    width: 80%;
+    border-top: 1px solid #a7a7a7;
+    border-collapse: collapse;
+}
+  th, td {
+    border-bottom: 1px solid #a7a7a7;
+    border-left: 1px solid #a7a7a7;
+    padding: 10px;
+}
+  th:first-child, td:first-child {
+    border-left: none;
+}
