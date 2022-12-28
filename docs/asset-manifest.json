@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.577ba1a1.css",
-    "main.js": "/static/js/main.d87d6a0e.js",
+    "main.js": "/static/js/main.3efbdc42.js",
     "static/js/787.9e0c1f39.chunk.js": "/static/js/787.9e0c1f39.chunk.js",
     "static/media/java.png": "/static/media/java.e33b881cd42a867cae10.png",
     "static/media/python.png": "/static/media/python.0dac0c703a76df229d76.png",
@@ -10,26 +10,27 @@
     "static/media/process_and_thread.md": "/static/media/process_and_thread.d2b32270f8c676f4fa61.md",
     "static/media/django_admin_guide.md": "/static/media/django_admin_guide.3d190e4a9c8790be3c32.md",
     "static/media/os_summary.md": "/static/media/os_summary.e5a07c7e4b21a98a4634.md",
-    "static/media/java_start_06.md": "/static/media/java_start_06.6c39c5cce3516999fda9.md",
-    "static/media/java_start_02.md": "/static/media/java_start_02.a250a71fd4339c83cbbf.md",
+    "static/media/java_start_06.md": "/static/media/java_start_06.84ff31b16e41c5a35db7.md",
+    "static/media/java_start_02.md": "/static/media/java_start_02.95d0a530c574de0405e6.md",
     "static/media/tdd_is_dead_2.md": "/static/media/tdd_is_dead_2.d6395edf16882564c5c7.md",
     "static/media/modified_delete_admin.md": "/static/media/modified_delete_admin.5e92d6aa1c022ba2de22.md",
-    "static/media/java_start_04.md": "/static/media/java_start_04.223d02efd9665d91e07f.md",
-    "static/media/java_start_03.md": "/static/media/java_start_03.297c9245c213c68480b9.md",
+    "static/media/java_start_07.md": "/static/media/java_start_07.7d241c725424e9b02df8.md",
+    "static/media/java_start_04.md": "/static/media/java_start_04.113ca9281a704143e9d7.md",
+    "static/media/java_start_03.md": "/static/media/java_start_03.990c15820b2074c688b5.md",
     "static/media/tdd_is_dead_1.md": "/static/media/tdd_is_dead_1.311998610f406a13d31c.md",
-    "static/media/java_start_05.md": "/static/media/java_start_05.90bb5dae7b3c7a3e1f29.md",
-    "static/media/java_start_01.md": "/static/media/java_start_01.3b29eaed07178b50aa59.md",
+    "static/media/java_start_05.md": "/static/media/java_start_05.866c363a2041f8817567.md",
+    "static/media/java_start_01.md": "/static/media/java_start_01.395a7da5ffd30bfa6e51.md",
     "static/media/search.svg": "/static/media/search.f7a26ab2c1e6ae877b07de2d73c3ff06.svg",
     "static/media/plus.svg": "/static/media/plus.e5cd68e58ecd486bb4c60a74e3f45dce.svg",
     "index.html": "/index.html",
     "static/media/mac-option-key.svg": "/static/media/mac-option-key.a928667077ca731966a5a722816db08c.svg",
     "static/media/space.svg": "/static/media/space.7c68ad61c180c32c46c6ee1eea225d1d.svg",
     "main.577ba1a1.css.map": "/static/css/main.577ba1a1.css.map",
-    "main.d87d6a0e.js.map": "/static/js/main.d87d6a0e.js.map",
+    "main.3efbdc42.js.map": "/static/js/main.3efbdc42.js.map",
     "787.9e0c1f39.chunk.js.map": "/static/js/787.9e0c1f39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.577ba1a1.css",
-    "static/js/main.d87d6a0e.js"
+    "static/js/main.3efbdc42.js"
   ]
 }

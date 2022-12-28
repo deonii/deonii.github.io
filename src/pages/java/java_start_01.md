@@ -1,4 +1,4 @@
-# Java - 1
+# Java 기초 - 1
 
 - 목차
     1. System.out.println()

@@ -25,39 +25,44 @@
 	],
 	"python": [],
     "java": [{
-        "name" : "Java - 6",
+        "name" : "Java 기초 - 7",
+        "date" : "20221228",
+        "datetime" : "2022-12-28 22:57",
+        "filename" : "java_start_07.md"
+    },{
+        "name" : "Java 기초 - 6",
         "date" : "20221227",
         "datetime" : "2022-12-27 18:51",
         "filename" : "java_start_06.md"
     },{
-        "name" : "Java - 5",
+        "name" : "Java 기초 - 5",
         "date" : "20221227",
         "datetime" : "2022-12-27 00:25",
         "filename" : "java_start_05.md"
     },{
-        "name" : "Java - 4",
+        "name" : "Java 기초 - 4",
         "date" : "20221226",
         "datetime" : "2022-12-26 20:01",
         "filename" : "java_start_04.md"
     },{
-        "name" : "Java - 3",
+        "name" : "Java 기초 - 3",
         "date" : "20221223",
         "datetime" : "2022-12-25 00:21",
         "filename" : "java_start_03.md"
     },{
-        "name" : "Java - 2",
+        "name" : "Java 기초 - 2",
         "date" : "20221223",
         "datetime" : "2022-12-23 12:01",
         "filename" : "java_start_02.md"
     },{
-        "name" : "Java - 1",
+        "name" : "Java 기초 - 1",
         "date" : "20221222",
         "datetime" : "2022-12-22 14:32",
         "filename" : "java_start_01.md"
     }
     ],
     "cs": [{
-        "name" : "프로세스 / 쓰레드",
+        "name" : "프로세스 / 쓰레",
         "date" : "20221228",
         "datetime" : "2022-12-28 14:51",
         "filename" : "process_and_thread.md"
