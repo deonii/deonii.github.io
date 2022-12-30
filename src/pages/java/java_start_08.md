@@ -51,8 +51,6 @@ items.remove(0);
 
 items;
 => []
-
-
 ```
 
 ## toString()
@@ -172,8 +170,8 @@ package deonii.level2;
 
 public class Student extends Person{
 
-public Student(String name, String email) {
-    super(name, email); // super는 부모클래스의 생성자를 호출한다.
+    public Student(String name, String email) {
+        super(name, email); // super는 부모클래스의 생성자를 호출한다.
     }
 
     public String toString() {
@@ -220,3 +218,31 @@ public class Person extends Object {
 ![](https://velog.velcdn.com/images/deonii/post/85d1437f-5a91-490b-b998-402666d65cf0/image.png)
 
 때문에 System.out으로 출력했을때 해당 부분이 사용됐던거고 오버라이딩을 통해 재정의가 가능했던 것이다.
+
+### instanceof
+
+인스턴스가 해당 클래스의 인스턴스인지를 알려준다.(상속 받은 클래스도 확인 가능하다)
+
+바로 위의 내용을 보면 Object를 모든 클래스는 상속 받는다고 하였다. 확인해보자.
+
+```
+class Animal {}
+
+class Pet extends Animal {}
+
+Animal tiger = new Animal();
+
+Pet dog = new Pet();
+
+tiger instanceof Object;
+=> true
+
+dog instanceof Pet;
+=> true
+
+dog instanceof Animal;
+=> true
+
+tiger instanceof Pet;
+=> false
+```
