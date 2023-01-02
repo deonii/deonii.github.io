@@ -25,6 +25,11 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "Java 기초 - 12",
+        "date" : "20230103",
+        "datetime" : "2023-01-03 13:25",
+        "filename" : "java_start_12.md"
+    },{
         "name" : "Java 기초 - 11",
         "date" : "20230102",
         "datetime" : "2023-01-02 16:22",
