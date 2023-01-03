@@ -2,10 +2,11 @@
 
 - 목차
     1. Queue
-    2. set
-        1. HashSet
-        2. LinkedHashSet
-        3. TreeSet
+    2. Map
+        1. HashMap
+        2. LinkedHashMap
+        3. Treemap
+    3. generics
 
 ## Queue
 
