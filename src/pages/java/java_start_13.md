@@ -2,6 +2,7 @@
 
 - 목차
     1. 함수형 프로그래밍
+    2. 메소드 레퍼런스
 
 ## 함수형 프로그래밍
 
@@ -94,3 +95,37 @@ IntStream.range(1,11).forEach(i -> System.out.println(i));
 IntStream.range(1,11).boxed().collect(Collectors.toList());
 => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
+
+## 메소드 레퍼런스
+
+메소드 레퍼런스를 통해 함수형 프로그래밍 파트에서 알아본 메서드들을 축약해보자.
+
+```
+List<Integer> list1 = List.of(1,3,5,7,9,11,13,15);
+
+list1.stream().forEach(System.out::println);
+=> 1
+3
+5
+7
+9
+11
+13
+15
+```
+
+본래 "ele -> System.out.println(ele)"로 작성했던 부분을 "System.out::println"로 축약했다.
+
+규칙은 "클래스명::메서드명" 이다.
+
+변수가 2개 이상인 경우에도 사용 가능하다.
+
+```
+list1.stream().max((n1, n2) -> Integer.compare(n1, n2)).orElse(0);
+=> 15
+
+list1.stream().max(Integer::compare).orElse(0);
+=> 15
+```
+
+마찬가지로 "클래스명::메서드명"으로 사용 가능하다.

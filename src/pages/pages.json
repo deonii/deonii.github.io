@@ -92,7 +92,12 @@
     }
     ],
     "cs": [{
-        "name" : "프로세스 / 쓰레",
+        "name" : "CPU 스케쥴링",
+        "date" : "20230104",
+        "datetime" : "2023-01-04 18:27",
+        "filename" : "cpu_scheduling.md"
+    },{
+        "name" : "프로세스 / 쓰레드",
         "date" : "20221228",
         "datetime" : "2022-12-28 14:51",
         "filename" : "process_and_thread.md"
