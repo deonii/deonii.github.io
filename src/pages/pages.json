@@ -25,6 +25,11 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "소수 알고리즘",
+        "date" : "20230106",
+        "datetime" : "2023-01-06 17:23",
+        "filename" : "prime_number_algorithm.md"
+    },{
         "name" : "Java 기초 - 14",
         "date" : "20230105",
         "datetime" : "2023-01-05 15:39",
