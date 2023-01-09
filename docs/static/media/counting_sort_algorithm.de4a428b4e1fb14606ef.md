@@ -123,7 +123,7 @@ public class Main {
         int[] array = new int[100];
         // counting 배열(수의 범위는 0~100)
         int[] counting = new int[101];
-        // 최종 배
+        // 최종 배열
         int[] result = new int[100];
 
         for(int i=0; i<100; i++) {
