@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.577ba1a1.css",
-    "main.js": "/static/js/main.c5586dba.js",
+    "main.js": "/static/js/main.ea0ee0b8.js",
     "static/js/787.9e0c1f39.chunk.js": "/static/js/787.9e0c1f39.chunk.js",
     "static/media/java.png": "/static/media/java.e33b881cd42a867cae10.png",
     "static/media/python.png": "/static/media/python.0dac0c703a76df229d76.png",
@@ -14,6 +14,7 @@
     "static/media/process_synchronization.md": "/static/media/process_synchronization.b21b414c495f66ea6ef8.md",
     "static/media/os_summary.md": "/static/media/os_summary.e5a07c7e4b21a98a4634.md",
     "static/media/counting_sort_algorithm.md": "/static/media/counting_sort_algorithm.de4a428b4e1fb14606ef.md",
+    "static/media/java_start_17.md": "/static/media/java_start_17.b5243ec7c06a921604dc.md",
     "static/media/java_start_15.md": "/static/media/java_start_15.a4777cc01da485e1f5d0.md",
     "static/media/java_start_06.md": "/static/media/java_start_06.84ff31b16e41c5a35db7.md",
     "static/media/java_start_11.md": "/static/media/java_start_11.1b2120f4965281b250f0.md",
@@ -39,11 +40,11 @@
     "static/media/mac-option-key.svg": "/static/media/mac-option-key.a928667077ca731966a5a722816db08c.svg",
     "static/media/space.svg": "/static/media/space.7c68ad61c180c32c46c6ee1eea225d1d.svg",
     "main.577ba1a1.css.map": "/static/css/main.577ba1a1.css.map",
-    "main.c5586dba.js.map": "/static/js/main.c5586dba.js.map",
+    "main.ea0ee0b8.js.map": "/static/js/main.ea0ee0b8.js.map",
     "787.9e0c1f39.chunk.js.map": "/static/js/787.9e0c1f39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.577ba1a1.css",
-    "static/js/main.c5586dba.js"
+    "static/js/main.ea0ee0b8.js"
   ]
 }
