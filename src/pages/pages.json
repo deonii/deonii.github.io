@@ -25,6 +25,12 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "Java 기초 - 18",
+        "date" : "20230111",
+        "datetime" : "2023-01-11 20:53",
+        "filename" : "java_start_18.md",
+        "keywords": "#모듈화#Predicate#String 추가 메서드#var#switch#record"
+    },{
         "name" : "Java 기초 - 17",
         "date" : "20230110",
         "datetime" : "2023-01-10 15:29",
