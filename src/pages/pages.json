@@ -25,11 +25,17 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "Spring 기초 - 1",
+        "date" : "20230112",
+        "datetime" : "2023-01-25 14:01",
+        "filename" : "spring_start_1.md",
+        "keywords": "#json#mvc"
+    },{
         "name" : "백준 11650번 - 좌표 정렬하기",
         "date" : "20230112",
         "datetime" : "2023-01-12 01:29",
         "filename" : "baekjoon_11650.md",
-        "keywords": "#Comparator#람다식"
+        "keywords": "#Comparator#람다식#알고리즘"
     },{
         "name" : "Java 기초 - 18",
         "date" : "20230111",
