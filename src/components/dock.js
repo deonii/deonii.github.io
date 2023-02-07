@@ -28,12 +28,15 @@ function Dock_bar({moveup, setMoveup}) {
             <Link className="dock-icon-a" to="/cs">
                 <Dock_icon num="3" style={dock_icon_style}></Dock_icon>
             </Link>
+            <Link className="dock-icon-a" to="/http">
+                <Dock_icon num="4" style={dock_icon_style}></Dock_icon>
+            </Link>
         </div>
     )
 }
 
 function Dock_icon({num, style}) {
-    let icon_list = ['python', 'django', 'java', 'cs']
+    let icon_list = ['python', 'django', 'java', 'cs', 'http']
     return (<div className={"dock-icon " + icon_list[num]} style={style}></div>)
 }
 

@@ -97,6 +97,12 @@ a {
     background-image: url("../public/img/computer.png");
 }
 
+.http {
+    background-size: 100% 100%;
+    background-position: center;
+    background-image: url("../public/img/http.png");
+}
+
 .finder {
     width: 1000px;
     height: 500px;

@@ -43,6 +43,9 @@ function App() {
                     <Route path="/cs" element={<Finder element={"cs"}></Finder>}>
                         <Route path=":id" element={<Page element={"cs"}></Page>}/>
                     </Route>
+                    <Route path="/http" element={<Finder element={"http"}></Finder>}>
+                        <Route path=":id" element={<Page element={"http"}></Page>}/>
+                    </Route>
                     <Route path=":search" element={<Finder element={'search'}></Finder>}>
                     </Route>
                 </Routes>

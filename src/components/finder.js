@@ -74,6 +74,9 @@ function Finder({element}) {
                     <Link to="/cs">
                         <p class={element == 'cs' ? 'categories finder-selected' : 'categories'}>
                             <Dock_icon num="3" style={dock_icon_style}></Dock_icon>Computer Science</p></Link>
+                    <Link to="/http">
+                        <p class={element == 'http' ? 'categories finder-selected' : 'categories'}>
+                            <Dock_icon num="4" style={dock_icon_style}></Dock_icon>HTTP</p></Link>
                 </div>
                 <div className="drag-bar">
                     <span style={finder_name_style}>{element}</span>

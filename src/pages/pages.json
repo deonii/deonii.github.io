@@ -193,5 +193,12 @@
         "datetime" : "2022-12-26 14:36",
         "filename" : "os_summary.md",
         "keywords": "#os#OS#역사#커널#하드웨어#폰 노이만 구조#메인보드#cpu#CPU#메모리#부팅"
+    }],
+    "http": [{
+        "name" : "인터넷 네트워크",
+        "date" : "20230208",
+        "datetime" : "2023-02-08 14:31",
+        "filename" : "internet_network.md",
+        "keywords": "#ip#IP#TCP#tcp#3 way handshack#udp#UDP#port#DNS#URI#uri#url#URL"
     }]
 }
