@@ -195,6 +195,12 @@
         "keywords": "#os#OS#역사#커널#하드웨어#폰 노이만 구조#메인보드#cpu#CPU#메모리#부팅"
     }],
     "http": [{
+        "name" : "쿠키와 세션",
+        "date" : "20230209",
+        "datetime" : "2023-02-09 13:48",
+        "filename" : "cookie_session.md",
+        "keywords": "#검증 헤더#Cache-Control"
+    },{
         "name" : "HTTP",
         "date" : "20230208",
         "datetime" : "2023-02-08 16:06",
