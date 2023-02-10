@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.22abf155.css",
-    "main.js": "/static/js/main.e5def66d.js",
+    "main.js": "/static/js/main.c7c62713.js",
     "static/js/787.9e0c1f39.chunk.js": "/static/js/787.9e0c1f39.chunk.js",
     "static/media/java.png": "/static/media/java.e33b881cd42a867cae10.png",
     "static/media/http.png": "/static/media/http.97f9aafc6bf4ff934838.png",
@@ -27,6 +27,7 @@
     "static/media/java_start_09.md": "/static/media/java_start_09.ef288cf47b3cb28c29b5.md",
     "static/media/java_start_08.md": "/static/media/java_start_08.4997df08dcaf386e192d.md",
     "static/media/compile_and_process.md": "/static/media/compile_and_process.a098d1c9d40315500870.md",
+    "static/media/memory.md": "/static/media/memory.5ee2c0d07324e4b7cfdc.md",
     "static/media/java_start_10.md": "/static/media/java_start_10.6c2a8b8b34a938603c1b.md",
     "static/media/cookie_session.md": "/static/media/cookie_session.966795b1f0cae0a96171.md",
     "static/media/prime_number_algorithm.md": "/static/media/prime_number_algorithm.0a8deb7a101849c3abf3.md",
@@ -49,11 +50,11 @@
     "static/media/mac-option-key.svg": "/static/media/mac-option-key.a928667077ca731966a5a722816db08c.svg",
     "static/media/space.svg": "/static/media/space.7c68ad61c180c32c46c6ee1eea225d1d.svg",
     "main.22abf155.css.map": "/static/css/main.22abf155.css.map",
-    "main.e5def66d.js.map": "/static/js/main.e5def66d.js.map",
+    "main.c7c62713.js.map": "/static/js/main.c7c62713.js.map",
     "787.9e0c1f39.chunk.js.map": "/static/js/787.9e0c1f39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22abf155.css",
-    "static/js/main.e5def66d.js"
+    "static/js/main.c7c62713.js"
   ]
 }
