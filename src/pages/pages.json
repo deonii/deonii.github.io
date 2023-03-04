@@ -25,6 +25,12 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "메이븐? 그래들?",
+        "date" : "20230303",
+        "datetime" : "2023-03-03 00:31",
+        "filename" : "maven_gradle.md",
+        "keywords": "#빌드#관리#도구"
+    },{
         "name" : "깊이 우선 탐색 / DFS",
         "date" : "20230214",
         "datetime" : "2023-02-14 11:51",
