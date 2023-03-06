@@ -25,6 +25,12 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "스프링의 Annotation 정리",
+        "date" : "20230306",
+        "datetime" : "2023-03-06 11:13",
+        "filename" : "spring_annotation.md",
+        "keywords": "#어노테이션#롬복#lombok"
+    },{
         "name" : "메이븐? 그래들?",
         "date" : "20230303",
         "datetime" : "2023-03-03 00:31",
