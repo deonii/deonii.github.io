@@ -25,6 +25,12 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "23년 1/4분기 회고록 (하쿠나 마타타)",
+        "date" : "20230327",
+        "datetime" : "2023-03-27 17:37",
+        "filename" : "first_memoir_of_23.md",
+        "keywords": "#mybox#챌린지#"
+    },{
         "name" : "스프링의 Annotation 정리",
         "date" : "20230306",
         "datetime" : "2023-03-06 11:13",
