@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.22abf155.css",
-    "main.js": "/static/js/main.971b2caf.js",
+    "main.js": "/static/js/main.dcbee8ed.js",
     "static/js/787.9e0c1f39.chunk.js": "/static/js/787.9e0c1f39.chunk.js",
     "static/media/java.png": "/static/media/java.e33b881cd42a867cae10.png",
     "static/media/http.png": "/static/media/http.97f9aafc6bf4ff934838.png",
@@ -44,6 +44,7 @@
     "static/media/java_start_07.md": "/static/media/java_start_07.7d241c725424e9b02df8.md",
     "static/media/java_start_04.md": "/static/media/java_start_04.113ca9281a704143e9d7.md",
     "static/media/java_start_03.md": "/static/media/java_start_03.990c15820b2074c688b5.md",
+    "static/media/algorithm_001.md": "/static/media/algorithm_001.9497ec097ba6804523fd.md",
     "static/media/tdd_is_dead_1.md": "/static/media/tdd_is_dead_1.311998610f406a13d31c.md",
     "static/media/java_start_13.md": "/static/media/java_start_13.c0a7724772435329c8e5.md",
     "static/media/java_start_05.md": "/static/media/java_start_05.866c363a2041f8817567.md",
@@ -54,11 +55,11 @@
     "static/media/mac-option-key.svg": "/static/media/mac-option-key.a928667077ca731966a5a722816db08c.svg",
     "static/media/space.svg": "/static/media/space.7c68ad61c180c32c46c6ee1eea225d1d.svg",
     "main.22abf155.css.map": "/static/css/main.22abf155.css.map",
-    "main.971b2caf.js.map": "/static/js/main.971b2caf.js.map",
+    "main.dcbee8ed.js.map": "/static/js/main.dcbee8ed.js.map",
     "787.9e0c1f39.chunk.js.map": "/static/js/787.9e0c1f39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22abf155.css",
-    "static/js/main.971b2caf.js"
+    "static/js/main.dcbee8ed.js"
   ]
 }
