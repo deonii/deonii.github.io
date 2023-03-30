@@ -25,6 +25,18 @@
 	],
 	"python": [],
     "java": [{
+        "name" : "가장 높은 탑 쌓기",
+        "date" : "20230330",
+        "datetime" : "2023-03-30 17:01",
+        "filename" : "algorithm_003.md",
+        "keywords": "#동적계획법"
+    },{
+        "name" : "최대 부분 증가수열",
+        "date" : "20230329",
+        "datetime" : "2023-03-29 21:23",
+        "filename" : "algorithm_002.md",
+        "keywords": "#동적계획법"
+    },{
         "name" : "계단오르기",
         "date" : "20230328",
         "datetime" : "2023-03-28 16:37",
